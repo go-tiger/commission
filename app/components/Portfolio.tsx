@@ -94,6 +94,7 @@ export default function Portfolio() {
               showAll={showAll.launcher}
               defaultEmoji='🎮'
               onShowAll={() => setShowAll(prev => ({ ...prev, launcher: true }))}
+              category='launcher'
             />
           )}
 
@@ -104,6 +105,7 @@ export default function Portfolio() {
               showAll={showAll.server}
               defaultEmoji='🌍'
               onShowAll={() => setShowAll(prev => ({ ...prev, server: true }))}
+              category='server'
               renderSub={item => {
                 const s = item as ServerItem;
                 return (
@@ -137,6 +139,7 @@ function TabContent({
   defaultEmoji,
   onShowAll,
   renderSub,
+  category,
 }: {
   items: (LauncherItem | ServerItem)[];
   total: number;
@@ -144,12 +147,13 @@ function TabContent({
   defaultEmoji: string;
   onShowAll: () => void;
   renderSub?: (item: LauncherItem | ServerItem) => React.ReactNode;
+  category: 'launcher' | 'server';
 }) {
   return (
     <div>
       <div className='portfolio-grid'>
         {items.map((item, idx) => (
-          <PortfolioCard key={idx} item={item} defaultEmoji={defaultEmoji} renderSub={renderSub} />
+          <PortfolioCard key={idx} item={item} defaultEmoji={defaultEmoji} renderSub={renderSub} category={category} />
         ))}
       </div>
       {!showAll && total > INITIAL_COUNT && (
@@ -180,11 +184,19 @@ function PortfolioCard({
   item,
   defaultEmoji,
   renderSub,
+  category,
 }: {
   item: LauncherItem | ServerItem;
   defaultEmoji: string;
   renderSub?: (item: LauncherItem | ServerItem) => React.ReactNode;
+  category: 'launcher' | 'server';
 }) {
+  const getImagePath = (): string | null => {
+    if (item.image) return item.image;
+    const base = process.env.NODE_ENV === 'production' ? '/commission' : '';
+    return `${base}/${category}/${item.id}.png`;
+  };
+
   return (
     <div
       style={{
@@ -222,12 +234,15 @@ function PortfolioCard({
           overflow: 'hidden',
         }}
       >
-        {item.image ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={item.image} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-        ) : (
-          <span style={{ fontSize: '32px' }}>{defaultEmoji}</span>
-        )}
+        {(() => {
+          const imagePath = getImagePath();
+          return imagePath ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={imagePath} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          ) : (
+            <span style={{ fontSize: '32px' }}>{defaultEmoji}</span>
+          );
+        })()}
       </div>
       <div style={{ padding: '20px' }}>
         <h3 style={{ fontSize: '18px', marginBottom: '10px', color: 'var(--text-primary)' }}>{item.title}</h3>

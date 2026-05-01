@@ -1,5 +1,5 @@
 export interface LauncherItem {
-  id: string;
+  id: number;
   title: string;
   client: string;
   date: string;
@@ -7,7 +7,7 @@ export interface LauncherItem {
 }
 
 export interface ServerItem {
-  id: string;
+  id: number;
   title: string;
   game?: string;
   client: string;

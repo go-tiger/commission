@@ -1,12 +1,18 @@
-import type { PortfolioData } from '../types/portfolio';
+import type { PortfolioData, LauncherItem, ServerItem } from '../types/portfolio';
 
 export async function getPortfolioData(): Promise<PortfolioData> {
   const base = process.env.NODE_ENV === 'production' ? '/commission' : '';
-  const response = await fetch(`${base}/portfolio-data.json`);
-  const data: PortfolioData = await response.json();
 
-  data.launcher.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-  data.server.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const [launcherRes, serverRes] = await Promise.all([
+    fetch(`${base}/launcher/data.json`),
+    fetch(`${base}/server/data.json`),
+  ]);
 
-  return data;
+  const launcher: LauncherItem[] = await launcherRes.json();
+  const server: ServerItem[] = await serverRes.json();
+
+  launcher.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  server.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  return { launcher, server };
 }
