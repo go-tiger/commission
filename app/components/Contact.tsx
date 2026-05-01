@@ -2,14 +2,15 @@
 
 export default function Contact() {
   return (
-    <section id="contact" style={{ padding: '80px 0', background: 'var(--bg)' }}>
+    <section id='contact' style={{ padding: '80px 0', background: 'var(--bg)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
         <h2
           style={{
             fontSize: '36px',
-            marginBottom: '50px',
+            marginBottom: '25px',
             textAlign: 'center',
             color: 'var(--text-primary)',
+            fontWeight: 700,
           }}
         >
           문의하기
@@ -41,9 +42,9 @@ export default function Contact() {
             디스코드 커뮤니티에 참여해주세요!
           </p>
           <a
-            href="https://discord.gg/am48Cvufun"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://discord.gg/am48Cvufun'
+            target='_blank'
+            rel='noopener noreferrer'
             style={{
               display: 'inline-block',
               backgroundColor: 'var(--accent-light)',
@@ -53,17 +54,16 @@ export default function Contact() {
               fontWeight: 600,
               fontSize: '18px',
               textDecoration: 'none',
-              marginBottom: '30px',
               transition: 'all 0.3s ease',
               boxShadow: '0 4px 12px rgba(6, 182, 212, 0.3)',
             }}
-            onMouseEnter={(e) => {
+            onMouseEnter={e => {
               const el = e.currentTarget;
               el.style.backgroundColor = 'var(--accent)';
               el.style.transform = 'translateY(-2px)';
               el.style.boxShadow = '0 6px 16px rgba(6, 182, 212, 0.4)';
             }}
-            onMouseLeave={(e) => {
+            onMouseLeave={e => {
               const el = e.currentTarget;
               el.style.backgroundColor = 'var(--accent-light)';
               el.style.transform = 'translateY(0)';
@@ -80,9 +80,7 @@ export default function Contact() {
             }}
           >
             <h3 style={{ marginBottom: '15px', color: 'var(--text-primary)' }}>서비스 문의</h3>
-            <p style={{ color: 'var(--text-secondary)', marginBottom: '10px' }}>
-              📧 Email: dev.gotiger@gmail.com
-            </p>
+            <p style={{ color: 'var(--text-secondary)', marginBottom: '10px' }}>📧 Email: dev.gotiger@gmail.com</p>
             <p style={{ color: 'var(--text-secondary)' }}>💬 Discord: gotiger_#7478</p>
           </div>
         </div>

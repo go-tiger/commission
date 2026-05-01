@@ -4,18 +4,18 @@ const services = [
   {
     emoji: '🎮',
     title: '커스텀 런처',
-    description: '모드 로더, 프로필 관리, 자동 업데이트 기능을 포함한 고급 게임 런처',
+    description: '모드 로더, 프로필 관리, 자동 업데이트 기능을 포함한 마인크래프트 커스텀 런처',
   },
   {
     emoji: '🌍',
     title: '게임 서버',
-    description: '안정적인 게임 서버 구축, 플러그인 설정, 성능 최적화 및 관리 제공',
+    description: '게임 서버 구축, 성능 최적화 및 관리 제공',
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" style={{ padding: '80px 0', background: 'var(--bg)' }}>
+    <section id='services' style={{ padding: '80px 0', background: 'var(--bg)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
         <h2
           style={{
@@ -24,6 +24,7 @@ export default function Services() {
             textAlign: 'center',
             color: 'var(--text-primary)',
             position: 'relative',
+            fontWeight: 700,
           }}
         >
           제공 서비스
@@ -47,7 +48,7 @@ export default function Services() {
             margin: '0 auto',
           }}
         >
-          {services.map((s) => (
+          {services.map(s => (
             <ServiceCard key={s.title} {...s} />
           ))}
         </div>
@@ -67,11 +68,11 @@ function ServiceCard({ emoji, title, description }: { emoji: string; title: stri
         transition: 'all 0.3s ease',
         cursor: 'default',
       }}
-      onMouseEnter={(e) => {
+      onMouseEnter={e => {
         e.currentTarget.style.transform = 'translateY(-8px)';
         e.currentTarget.style.boxShadow = '0 12px 24px rgba(0,0,0,0.15)';
       }}
-      onMouseLeave={(e) => {
+      onMouseLeave={e => {
         e.currentTarget.style.transform = 'translateY(0)';
         e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
       }}
@@ -79,7 +80,7 @@ function ServiceCard({ emoji, title, description }: { emoji: string; title: stri
       <div
         style={{
           width: '100%',
-          aspectRatio: '16/9',
+          aspectRatio: '16/6',
           background: 'linear-gradient(135deg, var(--accent) 0%, var(--success) 100%)',
           display: 'flex',
           alignItems: 'center',

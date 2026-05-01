@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       style={{
-        padding: '80px 0',
+        padding: '40px 0',
         background: 'linear-gradient(135deg, var(--primary) 0%, var(--accent-dark) 100%)',
         color: 'white',
         textAlign: 'center',
@@ -48,13 +48,13 @@ export default function Hero() {
             transition: 'all 0.3s ease',
             boxShadow: '0 4px 12px rgba(6, 182, 212, 0.3)',
           }}
-          onMouseEnter={(e) => {
+          onMouseEnter={e => {
             const el = e.currentTarget;
             el.style.backgroundColor = 'var(--accent)';
             el.style.transform = 'translateY(-2px)';
             el.style.boxShadow = '0 6px 16px rgba(6, 182, 212, 0.4)';
           }}
-          onMouseLeave={(e) => {
+          onMouseLeave={e => {
             const el = e.currentTarget;
             el.style.backgroundColor = 'var(--accent-light)';
             el.style.transform = 'translateY(0)';

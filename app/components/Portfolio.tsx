@@ -40,7 +40,7 @@ export default function Portfolio() {
   });
 
   return (
-    <section id="portfolio" style={{ padding: '80px 0', background: 'var(--bg)' }}>
+    <section id='portfolio' style={{ padding: '60px 0', background: 'var(--bg)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
         <h2
           style={{
@@ -48,6 +48,7 @@ export default function Portfolio() {
             marginBottom: '50px',
             textAlign: 'center',
             color: 'var(--text-primary)',
+            fontWeight: 700,
           }}
         >
           포트폴리오
@@ -91,8 +92,8 @@ export default function Portfolio() {
               items={showAll.launcher ? data.launcher : data.launcher.slice(0, INITIAL_COUNT)}
               total={data.launcher.length}
               showAll={showAll.launcher}
-              defaultEmoji="🎮"
-              onShowAll={() => setShowAll((prev) => ({ ...prev, launcher: true }))}
+              defaultEmoji='🎮'
+              onShowAll={() => setShowAll(prev => ({ ...prev, launcher: true }))}
             />
           )}
 
@@ -101,9 +102,9 @@ export default function Portfolio() {
               items={showAll.server ? data.server : data.server.slice(0, INITIAL_COUNT)}
               total={data.server.length}
               showAll={showAll.server}
-              defaultEmoji="🌍"
-              onShowAll={() => setShowAll((prev) => ({ ...prev, server: true }))}
-              renderSub={(item) => {
+              defaultEmoji='🌍'
+              onShowAll={() => setShowAll(prev => ({ ...prev, server: true }))}
+              renderSub={item => {
                 const s = item as ServerItem;
                 return (
                   <>
@@ -146,7 +147,7 @@ function TabContent({
 }) {
   return (
     <div>
-      <div className="portfolio-grid">
+      <div className='portfolio-grid'>
         {items.map((item, idx) => (
           <PortfolioCard key={idx} item={item} defaultEmoji={defaultEmoji} renderSub={renderSub} />
         ))}
@@ -196,11 +197,11 @@ function PortfolioCard({
         display: 'flex',
         flexDirection: 'column',
       }}
-      onMouseEnter={(e) => {
+      onMouseEnter={e => {
         e.currentTarget.style.transform = 'translateY(-8px)';
         e.currentTarget.style.boxShadow = '0 12px 24px rgba(0,0,0,0.15)';
       }}
-      onMouseLeave={(e) => {
+      onMouseLeave={e => {
         e.currentTarget.style.transform = 'translateY(0)';
         e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
       }}
