@@ -8,7 +8,8 @@
     "date": "2019/10/19",
     "duration": "",
     "players": "",
-    "hasCreativeServer": false
+    "hasCreativeServer": false,
+    "youtubeId": "p3dI6J3HQKc"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "date": "2020/05/07",
     "duration": "",
     "players": "",
-    "hasCreativeServer": false
+    "hasCreativeServer": false,
+    "youtubeId": "6QhrL60qGLE"
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "date": "2021/07/31",
     "duration": "",
     "players": "",
-    "hasCreativeServer": false
+    "hasCreativeServer": false,
+    "image": "https://team-handmade.com/portfolio/05-%EC%96%91%EB%9D%B5TV-%ED%87%B4%EA%B7%BC%ED%83%80%EC%9D%B4%EC%BF%A4-%EC%BB%A4%ED%94%BC%ED%95%9C%EC%9E%94%ED%95%A0%EB%9E%98%EC%9A%94.jpg"
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
     "date": "2021/12/03",
     "duration": "",
     "players": "",
-    "hasCreativeServer": false
+    "hasCreativeServer": false,
+    "youtubeId": "5_xZBBs0WTY"
   },
   {
     "id": 5,
@@ -52,7 +56,8 @@
     "date": "2022/03/18",
     "duration": "2022/03/18~25",
     "players": "",
-    "hasCreativeServer": false
+    "hasCreativeServer": false,
+    "youtubeId": "9ZsYtA4ynVc"
   },
   {
     "id": 6,
@@ -63,7 +68,8 @@
     "date": "2022/07/22",
     "duration": "",
     "players": "",
-    "hasCreativeServer": false
+    "hasCreativeServer": false,
+    "youtubeId": "fWyi1vCHUyI"
   },
   {
     "id": 7,
@@ -74,7 +80,8 @@
     "date": "2023/01/20",
     "duration": "",
     "players": "",
-    "hasCreativeServer": false
+    "hasCreativeServer": false,
+    "youtubeId": "FqSwukURO9I"
   },
   {
     "id": 8,
@@ -85,7 +92,8 @@
     "date": "2024/04/12",
     "duration": "",
     "players": "",
-    "hasCreativeServer": false
+    "hasCreativeServer": false,
+    "youtubeId": "kNsHuxCSYQk"
   },
   {
     "id": 9,
@@ -96,11 +104,12 @@
     "date": "2024/06/23",
     "duration": "",
     "players": "80명",
-    "hasCreativeServer": false
+    "hasCreativeServer": false,
+    "youtubeId": "EzqloSsa5JI"
   },
   {
     "id": 10,
-    "title": "YT Clan",
+    "title": "YT Clan 야생서버",
     "subtitle": "시즌1",
     "game": "마인크래프트",
     "client": "딴비",
@@ -118,7 +127,8 @@
     "date": "2024/10/26",
     "duration": "",
     "players": "28명",
-    "hasCreativeServer": false
+    "hasCreativeServer": false,
+    "youtubeId": "fvd7ywHo-Ak"
   },
   {
     "id": 12,
@@ -129,7 +139,8 @@
     "date": "2024/11/02",
     "duration": "2024/11/02~2025/01/18",
     "players": "9명",
-    "hasCreativeServer": true
+    "hasCreativeServer": true,
+    "image": "https://team-handmade.com/portfolio/13-%EB%8B%88%EC%A6%88-%EA%B2%BD%EC%B0%B0%EA%B3%BC%EB%8F%84%EB%91%91.png"
   },
   {
     "id": 13,
@@ -144,17 +155,6 @@
   },
   {
     "id": 14,
-    "title": "둥지 서버",
-    "subtitle": "",
-    "game": "마인크래프트",
-    "client": "흰오목",
-    "date": "2024/12/30",
-    "duration": "2024/12/30~2025/02/05",
-    "players": "5명",
-    "hasCreativeServer": true
-  },
-  {
-    "id": 15,
     "title": "2025 일출서버",
     "subtitle": "",
     "game": "마인크래프트",
@@ -162,10 +162,11 @@
     "date": "2024/12/31",
     "duration": "2024/12/31~2025/01/01",
     "players": "40명",
-    "hasCreativeServer": false
+    "hasCreativeServer": false,
+    "image": "https://team-handmade.com/portfolio/12-%EA%B0%80%EC%8A%B5%EA%B8%B0-2025-%EC%9D%BC%EC%B6%9C%EC%84%9C%EB%B2%84.png"
   },
   {
-    "id": 16,
+    "id": 15,
     "title": "가습기의 노래교실",
     "subtitle": "",
     "game": "마인크래프트",
@@ -176,7 +177,7 @@
     "hasCreativeServer": false
   },
   {
-    "id": 17,
+    "id": 16,
     "title": "U.원피스",
     "subtitle": "",
     "game": "마인크래프트",
@@ -187,7 +188,7 @@
     "hasCreativeServer": false
   },
   {
-    "id": 18,
+    "id": 17,
     "title": "돗켓몬",
     "subtitle": "",
     "game": "마인크래프트",
@@ -198,7 +199,7 @@
     "hasCreativeServer": false
   },
   {
-    "id": 19,
+    "id": 18,
     "title": "물징어 게임",
     "subtitle": "",
     "game": "마인크래프트",
@@ -206,10 +207,11 @@
     "date": "2025/02/22",
     "duration": "",
     "players": "27명",
-    "hasCreativeServer": true
+    "hasCreativeServer": true,
+    "image": "https://team-handmade.com/portfolio/14-%EB%AC%BC%EC%B4%88%EC%BD%94-%EB%AC%BC%EC%A7%95%EC%96%B4%EA%B2%8C%EC%9E%84.jpg"
   },
   {
-    "id": 20,
+    "id": 19,
     "title": "제1회 스트리머 마크 대 운동회",
     "subtitle": "",
     "game": "마인크래프트",
@@ -220,7 +222,7 @@
     "hasCreativeServer": true
   },
   {
-    "id": 21,
+    "id": 20,
     "title": "드라코니아",
     "subtitle": "드래곤의 땅",
     "game": "마인크래프트",
@@ -231,7 +233,7 @@
     "hasCreativeServer": true
   },
   {
-    "id": 22,
+    "id": 21,
     "title": "YT Clan 다이아켠왕",
     "subtitle": "",
     "game": "마인크래프트",
@@ -242,7 +244,7 @@
     "hasCreativeServer": true
   },
   {
-    "id": 23,
+    "id": 22,
     "title": "다이아 방어전",
     "subtitle": "",
     "game": "마인크래프트",
@@ -253,7 +255,7 @@
     "hasCreativeServer": true
   },
   {
-    "id": 24,
+    "id": 23,
     "title": "홍신소 - 서열정리",
     "subtitle": "",
     "game": "마인크래프트",
@@ -264,7 +266,7 @@
     "hasCreativeServer": true
   },
   {
-    "id": 25,
+    "id": 24,
     "title": "별연 아트 온라인",
     "subtitle": "별아온",
     "game": "마인크래프트",
@@ -275,7 +277,7 @@
     "hasCreativeServer": false
   },
   {
-    "id": 26,
+    "id": 25,
     "title": "드라코니아",
     "subtitle": "서약의 축제",
     "game": "마인크래프트",
@@ -286,7 +288,7 @@
     "hasCreativeServer": true
   },
   {
-    "id": 27,
+    "id": 26,
     "title": "별 이 딴 서버가 다 있어!?",
     "subtitle": "",
     "game": "마인크래프트",
@@ -297,18 +299,7 @@
     "hasCreativeServer": false
   },
   {
-    "id": 28,
-    "title": "쿠롬이네 민박집",
-    "subtitle": "",
-    "game": "마인크래프트",
-    "client": "준우",
-    "date": "2025/09/09",
-    "duration": "",
-    "players": "",
-    "hasCreativeServer": false
-  },
-  {
-    "id": 29,
+    "id": 27,
     "title": "두찌두알 앤더드래곤잡기",
     "subtitle": "",
     "game": "마인크래프트",
@@ -319,7 +310,7 @@
     "hasCreativeServer": false
   },
   {
-    "id": 30,
+    "id": 28,
     "title": "신비 프로젝트",
     "subtitle": "",
     "game": "프로젝트 좀보이드",
@@ -330,7 +321,7 @@
     "hasCreativeServer": true
   },
   {
-    "id": 31,
+    "id": 29,
     "title": "딥플러스",
     "subtitle": "",
     "game": "마인크래프트",
@@ -341,7 +332,7 @@
     "hasCreativeServer": false
   },
   {
-    "id": 32,
+    "id": 30,
     "title": "도토리 마을",
     "subtitle": "",
     "game": "마인크래프트",
@@ -352,7 +343,7 @@
     "hasCreativeServer": false
   },
   {
-    "id": 33,
+    "id": 31,
     "title": "연말 콘텐츠",
     "subtitle": "스텔라이브",
     "game": "마인크래프트",
@@ -360,10 +351,11 @@
     "date": "2025/12/31",
     "duration": "",
     "players": "",
-    "hasCreativeServer": false
+    "hasCreativeServer": false,
+    "image": "https://team-handmade.com/portfolio/16-%EC%8A%A4%ED%85%94%EB%9D%BC%EC%9D%B4%EB%B8%8C-2025-%EC%97%B0%EB%A7%90-%EC%BB%A8%ED%85%90%EC%B8%A0.jpg"
   },
   {
-    "id": 34,
+    "id": 32,
     "title": "유니 3주년 콘텐츠",
     "subtitle": "스텔라이브",
     "game": "마인크래프트",
@@ -371,10 +363,11 @@
     "date": "2026/01/12",
     "duration": "",
     "players": "",
-    "hasCreativeServer": false
+    "hasCreativeServer": false,
+    "image": "https://team-handmade.com/portfolio/17-%EC%8A%A4%ED%85%94%EB%9D%BC%EC%9D%B4%EB%B8%8C-%EC%95%84%EC%95%BC%EC%B8%A0%EB%85%B8-%EC%9C%A0%EB%8B%88-3%EC%A3%BC%EB%85%84-%EC%BD%98%ED%85%90%EC%B8%A0.png"
   },
   {
-    "id": 35,
+    "id": 33,
     "title": "추락",
     "subtitle": "좀비섬 생존기",
     "game": "마인크래프트",

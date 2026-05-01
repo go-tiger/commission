@@ -192,11 +192,16 @@ function PortfolioCard({
   category: 'launcher' | 'server';
 }) {
   const [imageError, setImageError] = useState(false);
+  const [useJpg, setUseJpg] = useState(false);
 
   const getImagePath = (): string | null => {
     if (item.image) return item.image;
+    if ('youtubeId' in item && (item.youtubeId as string)) {
+      return `https://img.youtube.com/vi/${(item.youtubeId as string)}/maxresdefault.jpg`;
+    }
     const base = process.env.NODE_ENV === 'production' ? '/commission' : '';
-    return `${base}/${category}/${item.id}.png`;
+    const ext = useJpg ? 'jpg' : 'png';
+    return `${base}/${category}/${item.id}.${ext}`;
   };
 
   return (
@@ -231,7 +236,7 @@ function PortfolioCard({
           color: 'white',
           fontSize: '14px',
           textAlign: 'center',
-          padding: '20px',
+          padding: 0,
           flexShrink: 0,
           overflow: 'hidden',
         }}
@@ -244,7 +249,13 @@ function PortfolioCard({
               src={imagePath}
               alt={item.title}
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              onError={() => setImageError(true)}
+              onError={() => {
+                if (!useJpg) {
+                  setUseJpg(true);
+                } else {
+                  setImageError(true);
+                }
+              }}
             />
           ) : (
             <span style={{ fontSize: '32px' }}>{defaultEmoji}</span>
