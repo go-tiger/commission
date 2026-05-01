@@ -191,6 +191,8 @@ function PortfolioCard({
   renderSub?: (item: LauncherItem | ServerItem) => React.ReactNode;
   category: 'launcher' | 'server';
 }) {
+  const [imageError, setImageError] = useState(false);
+
   const getImagePath = (): string | null => {
     if (item.image) return item.image;
     const base = process.env.NODE_ENV === 'production' ? '/commission' : '';
@@ -236,9 +238,14 @@ function PortfolioCard({
       >
         {(() => {
           const imagePath = getImagePath();
-          return imagePath ? (
+          return imagePath && !imageError ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={imagePath} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img
+              src={imagePath}
+              alt={item.title}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              onError={() => setImageError(true)}
+            />
           ) : (
             <span style={{ fontSize: '32px' }}>{defaultEmoji}</span>
           );
