@@ -251,11 +251,36 @@ function PortfolioCard({
           );
         })()}
       </div>
-      <div style={{ padding: '20px' }}>
-        <h3 style={{ fontSize: '18px', marginBottom: '10px', color: 'var(--text-primary)' }}>{item.title}</h3>
-        <p style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
-          {item.client} · {item.date}
+      <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', height: '100%' }}>
+        <h3 style={{ fontSize: 'clamp(8px, 2.5vw, 16px)', marginBottom: '10px', color: 'var(--text-primary)', margin: '0 0 10px 0', fontWeight: 700, whiteSpace: 'nowrap' }}>
+          {item.title}
+        </h3>
+        {'subtitle' in item && (item.subtitle as string) && (
+          <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: '12px', margin: '0 0 12px 0', fontWeight: 500 }}>
+            {(item.subtitle as string)}
+          </p>
+        )}
+        <p style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: 1.4, margin: '0 0 4px 0', fontWeight: 400 }}>
+          {item.client}
         </p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
+          <p style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: 1.4, margin: 0, fontWeight: 400, flex: 1 }}>
+            {('duration' in item && (item.duration as string)) ? item.duration : item.date}
+          </p>
+          {'hasCreativeServer' in item && (item.hasCreativeServer as boolean) && (
+            <span style={{
+              fontSize: '11px',
+              background: 'var(--accent)',
+              color: 'white',
+              padding: '2px 6px',
+              borderRadius: '3px',
+              whiteSpace: 'nowrap',
+              fontWeight: 600
+            }}>
+              🛠️
+            </span>
+          )}
+        </div>
         {renderSub?.(item)}
       </div>
     </div>
