@@ -5,12 +5,11 @@ export default function Footer() {
         background: 'var(--primary)',
         color: 'white',
         textAlign: 'center',
-        padding: '40px 0',
-        marginTop: '80px',
+        padding: '25px 0',
       }}
     >
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
-        <p>&copy; 2024 마인크래프트 커스텀 런처. 모든 권리 예약.</p>
+        <p>&copy; 2026 고랑. All rights reserved.</p>
       </div>
     </footer>
   );
