@@ -377,6 +377,50 @@
     "date": "2026/02/06",
     "duration": "2026/02/06~08",
     "players": "50명",
+    "hasCreativeServer": true
+  },
+  {
+    "id": 34,
+    "title": "POE 서버",
+    "subtitle": "마크 컨텐츠 연구소",
+    "game": "마인크래프트",
+    "client": "라율",
+    "date": "2026/02/07",
+    "duration": "2026/02/07~11",
+    "players": "100명",
+    "hasCreativeServer": false
+  },
+  {
+    "id": 35,
+    "title": "창을 내요 홍창의 숲",
+    "subtitle": "",
+    "game": "마인크래프트",
+    "client": "라율",
+    "date": "2026/03/04",
+    "duration": "2026/03/04~08",
+    "players": "118명",
+    "hasCreativeServer": false
+  },
+  {
+    "id": 36,
+    "title": "드라코니아",
+    "subtitle": "잊지 못할 하늘",
+    "game": "마인크래프트",
+    "client": "타나리",
+    "date": "2026/03/27",
+    "duration": "2026/03/27~29",
+    "players": "55명",
+    "hasCreativeServer": true
+  },
+  {
+    "id": 37,
+    "title": "코블몬 찍먹 원정대",
+    "subtitle": "",
+    "game": "마인크래프트",
+    "client": "라율",
+    "date": "2026/04/03",
+    "duration": "2026/04/03~09",
+    "players": "30명",
     "hasCreativeServer": false
   }
 ]
