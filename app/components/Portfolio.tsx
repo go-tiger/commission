@@ -76,7 +76,7 @@ export default function Portfolio() {
           }}
         >
           <button style={tabButtonStyle(activeTab === 'launcher')} onClick={() => setActiveTab('launcher')}>
-            🎮 커스텀 런처 {data ? `(${data.launcher.length})` : ''}
+            🎮 커스텀 런처 {data ? `(${data.launcher.length} + ${data.additionalLauncherCount || 0})` : ''}
           </button>
           <button style={tabButtonStyle(activeTab === 'server')} onClick={() => setActiveTab('server')}>
             🌍 게임 서버 {data ? `(${data.server.length})` : ''}
@@ -95,6 +95,7 @@ export default function Portfolio() {
               defaultEmoji='🎮'
               onShowAll={() => setShowAll(prev => ({ ...prev, launcher: true }))}
               category='launcher'
+              additionalCount={data.additionalLauncherCount}
             />
           )}
 
@@ -140,6 +141,7 @@ function TabContent({
   onShowAll,
   renderSub,
   category,
+  additionalCount,
 }: {
   items: (LauncherItem | ServerItem)[];
   total: number;
@@ -148,6 +150,7 @@ function TabContent({
   onShowAll: () => void;
   renderSub?: (item: LauncherItem | ServerItem) => React.ReactNode;
   category: 'launcher' | 'server';
+  additionalCount?: number;
 }) {
   return (
     <div>
@@ -156,6 +159,13 @@ function TabContent({
           <PortfolioCard key={idx} item={item} defaultEmoji={defaultEmoji} renderSub={renderSub} category={category} />
         ))}
       </div>
+      {showAll && category === 'launcher' && additionalCount && additionalCount > 0 && (
+        <div style={{ textAlign: 'center', marginTop: '50px', padding: '30px', color: 'var(--text-secondary)' }}>
+          <p style={{ fontSize: '18px', lineHeight: 1.8, fontWeight: 500 }}>
+            이 외에도 <strong style={{ color: 'var(--accent)', fontSize: '20px' }}>{additionalCount}개 이상</strong>의 런처 제작을 진행했습니다.
+          </p>
+        </div>
+      )}
       {!showAll && total > INITIAL_COUNT && (
         <div style={{ textAlign: 'center', marginTop: '30px' }}>
           <button
