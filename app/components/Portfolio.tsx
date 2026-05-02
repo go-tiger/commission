@@ -45,7 +45,7 @@ export default function Portfolio() {
         <h2
           style={{
             fontSize: '36px',
-            marginBottom: '50px',
+            marginBottom: '10px',
             textAlign: 'center',
             color: 'var(--text-primary)',
             fontWeight: 700,
@@ -63,6 +63,9 @@ export default function Portfolio() {
             }}
           />
         </h2>
+        <p style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '14px', marginBottom: '40px', fontWeight: 400 }}>
+          마지막 업데이트: 2026/05/02
+        </p>
 
         {/* 탭 버튼 */}
         <div
