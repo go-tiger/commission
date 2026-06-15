@@ -21,4 +21,5 @@ export interface PortfolioData {
   launcher: LauncherItem[];
   server: ServerItem[];
   additionalLauncherCount?: number;
+  lastCommitDate?: string;
 }

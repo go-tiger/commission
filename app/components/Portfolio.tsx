@@ -64,7 +64,7 @@ export default function Portfolio() {
           />
         </h2>
         <p style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '14px', marginBottom: '40px', fontWeight: 400 }}>
-          마지막 업데이트: 2026/05/02
+          마지막 업데이트: {data?.lastCommitDate ?? '불러오는 중...'}
         </p>
 
         {/* 탭 버튼 */}
