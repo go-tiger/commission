@@ -79,7 +79,7 @@ export default function Portfolio() {
           }}
         >
           <button style={tabButtonStyle(activeTab === 'launcher')} onClick={() => setActiveTab('launcher')}>
-            🎮 커스텀 런처 {data ? `(${data.launcher.length} + ${data.additionalLauncherCount || 0})` : ''}
+            🎮 커스텀 런처 {data ? `(${data.launcher.length} + α)` : ''}
           </button>
           <button style={tabButtonStyle(activeTab === 'server')} onClick={() => setActiveTab('server')}>
             🌍 게임 서버 {data ? `(${data.server.length})` : ''}
