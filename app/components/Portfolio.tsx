@@ -54,10 +54,10 @@ export default function Portfolio() {
           }}
         >
           <button style={tabButtonStyle(activeTab === 'launcher')} onClick={() => setActiveTab('launcher')}>
-            🎮 커스텀 런처 {data ? `(${data.launcher.length} + α)` : ''}
+            🚀 커스텀 런처 {data ? `(${data.launcher.length} + α)` : ''}
           </button>
           <button style={tabButtonStyle(activeTab === 'server')} onClick={() => setActiveTab('server')}>
-            🌍 게임 서버 {data ? `(${data.server.length})` : ''}
+            🖥️ 게임 서버 {data ? `(${data.server.length})` : ''}
           </button>
         </div>
 
@@ -70,7 +70,7 @@ export default function Portfolio() {
               items={showAll.launcher ? data.launcher : data.launcher.slice(0, INITIAL_COUNT)}
               total={data.launcher.length}
               showAll={showAll.launcher}
-              defaultEmoji='🎮'
+              defaultEmoji='🚀'
               onShowAll={() => setShowAll(prev => ({ ...prev, launcher: true }))}
               category='launcher'
               additionalCount={data.additionalLauncherCount}
@@ -82,7 +82,7 @@ export default function Portfolio() {
               items={showAll.server ? data.server : data.server.slice(0, INITIAL_COUNT)}
               total={data.server.length}
               showAll={showAll.server}
-              defaultEmoji='🌍'
+              defaultEmoji='🖥️'
               onShowAll={() => setShowAll(prev => ({ ...prev, server: true }))}
               category='server'
               renderSub={item => {

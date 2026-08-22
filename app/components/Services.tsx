@@ -2,12 +2,12 @@
 
 const services = [
   {
-    emoji: '🎮',
+    emoji: '🚀',
     title: '커스텀 런처',
     description: '모드 로더, 프로필 관리, 자동 업데이트 기능을 포함한 마인크래프트 커스텀 런처',
   },
   {
-    emoji: '🌍',
+    emoji: '🖥️',
     title: '게임 서버',
     description: '게임 서버 구축, 성능 최적화 및 관리 제공',
   },
