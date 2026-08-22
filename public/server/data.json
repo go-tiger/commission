@@ -444,5 +444,16 @@
     "duration": "2026/06/13",
     "players": "33명",
     "hasCreativeServer": true
+  },
+  {
+    "id": 40,
+    "title": "당근게임",
+    "subtitle": "",
+    "game": "마인크래프트",
+    "client": "이욱&라비",
+    "date": "2026/07/03",
+    "duration": "2026/07/03~12",
+    "players": "",
+    "hasCreativeServer": false
   }
 ]
