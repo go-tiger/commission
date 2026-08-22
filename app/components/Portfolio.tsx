@@ -6,12 +6,6 @@ import type { PortfolioData, LauncherItem, ServerItem } from '../types/portfolio
 
 const INITIAL_COUNT = 5;
 
-const gridStyle: React.CSSProperties = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(5, 1fr)',
-  gap: '24px',
-};
-
 export default function Portfolio() {
   const [data, setData] = useState<PortfolioData | null>(null);
   const [activeTab, setActiveTab] = useState<'launcher' | 'server'>('launcher');
@@ -29,41 +23,24 @@ export default function Portfolio() {
   const tabButtonStyle = (active: boolean): React.CSSProperties => ({
     background: 'none',
     border: 'none',
-    fontSize: '18px',
+    fontSize: '16px',
     fontWeight: active ? 700 : 500,
-    color: active ? 'var(--accent)' : 'var(--text-secondary)',
+    color: active ? 'var(--text-primary)' : 'var(--text-secondary)',
     cursor: 'pointer',
-    paddingBottom: '10px',
-    borderBottom: active ? '3px solid var(--accent)' : '3px solid transparent',
+    paddingBottom: '12px',
+    borderBottom: active ? '2px solid var(--accent)' : '2px solid transparent',
     transition: 'all 0.3s ease',
     fontFamily: 'inherit',
   });
 
   return (
-    <section id='portfolio' style={{ padding: '60px 0', background: 'var(--bg)' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
-        <h2
-          style={{
-            fontSize: '36px',
-            marginBottom: '10px',
-            textAlign: 'center',
-            color: 'var(--text-primary)',
-            fontWeight: 700,
-          }}
-        >
-          포트폴리오
-          <span
-            style={{
-              display: 'block',
-              width: '80px',
-              height: '4px',
-              background: 'linear-gradient(90deg, var(--accent) 0%, var(--success) 100%)',
-              margin: '15px auto 0',
-              borderRadius: '2px',
-            }}
-          />
-        </h2>
-        <p style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '14px', marginBottom: '40px', fontWeight: 400 }}>
+    <section id='portfolio' style={{ padding: '100px 0', background: 'var(--bg)' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
+        <p style={{ color: 'var(--accent)', fontSize: '13px', letterSpacing: '0.2em', fontWeight: 700, marginBottom: '16px' }}>
+          PROJECT
+        </p>
+        <h2 style={{ fontSize: 'clamp(32px, 4vw, 44px)', fontWeight: 800, marginBottom: '10px' }}>참여한 프로젝트</h2>
+        <p style={{ color: 'var(--text-secondary)', fontSize: '14px', marginBottom: '40px', fontWeight: 400 }}>
           마지막 업데이트: {data?.lastCommitDate ?? '불러오는 중...'}
         </p>
 
@@ -71,11 +48,9 @@ export default function Portfolio() {
         <div
           style={{
             display: 'flex',
-            justifyContent: 'center',
-            gap: '20px',
+            gap: '28px',
             marginBottom: '40px',
-            borderBottom: '2px solid var(--border)',
-            paddingBottom: '15px',
+            borderBottom: '1px solid var(--border)',
           }}
         >
           <button style={tabButtonStyle(activeTab === 'launcher')} onClick={() => setActiveTab('launcher')}>
@@ -126,7 +101,7 @@ export default function Portfolio() {
 
       {/* 반응형 grid 스타일 */}
       <style>{`
-        .portfolio-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
         @media (max-width: 1400px) { .portfolio-grid { grid-template-columns: repeat(4, 1fr); } }
         @media (max-width: 1024px) { .portfolio-grid { grid-template-columns: repeat(3, 1fr); } }
         @media (max-width: 768px)  { .portfolio-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -163,9 +138,9 @@ function TabContent({
         ))}
       </div>
       {showAll && category === 'launcher' && additionalCount && additionalCount > 0 && (
-        <div style={{ textAlign: 'center', marginTop: '50px', padding: '30px', color: 'var(--text-secondary)' }}>
-          <p style={{ fontSize: '18px', lineHeight: 1.8, fontWeight: 500 }}>
-            이 외에도 <strong style={{ color: 'var(--accent)', fontSize: '20px' }}>{additionalCount}개 이상</strong>의 런처 제작을 진행했습니다.
+        <div style={{ textAlign: 'center', marginTop: '40px', padding: '24px', color: 'var(--text-secondary)' }}>
+          <p style={{ fontSize: '16px' }}>
+            이 외에도 <strong style={{ color: 'var(--accent)' }}>{additionalCount}개 이상</strong>의 런처 제작을 진행했습니다.
           </p>
         </div>
       )}
@@ -174,11 +149,11 @@ function TabContent({
           <button
             onClick={onShowAll}
             style={{
-              background: 'var(--accent)',
-              color: 'white',
-              border: 'none',
-              padding: '10px 20px',
-              borderRadius: '8px',
+              background: 'none',
+              color: 'var(--accent)',
+              border: '1px solid var(--accent)',
+              padding: '10px 24px',
+              borderRadius: '4px',
               cursor: 'pointer',
               fontSize: '14px',
               fontWeight: 600,
@@ -221,32 +196,32 @@ function PortfolioCard({
     <div
       style={{
         background: 'var(--surface)',
-        borderRadius: '12px',
+        borderRadius: '6px',
         overflow: 'hidden',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+        border: '1px solid var(--border)',
         transition: 'all 0.3s ease',
         cursor: 'pointer',
         display: 'flex',
         flexDirection: 'column',
       }}
       onMouseEnter={e => {
-        e.currentTarget.style.transform = 'translateY(-8px)';
-        e.currentTarget.style.boxShadow = '0 12px 24px rgba(0,0,0,0.15)';
+        e.currentTarget.style.transform = 'translateY(-6px)';
+        e.currentTarget.style.borderColor = 'var(--accent)';
       }}
       onMouseLeave={e => {
         e.currentTarget.style.transform = 'translateY(0)';
-        e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
+        e.currentTarget.style.borderColor = 'var(--border)';
       }}
     >
       <div
         style={{
           width: '100%',
           aspectRatio: '16/9',
-          background: 'linear-gradient(135deg, var(--accent) 0%, var(--success) 100%)',
+          background: 'var(--surface2)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: 'white',
+          color: 'var(--text-secondary)',
           fontSize: '14px',
           textAlign: 'center',
           padding: 0,
@@ -271,31 +246,31 @@ function PortfolioCard({
               }}
             />
           ) : (
-            <span style={{ fontSize: '32px' }}>{defaultEmoji}</span>
+            <span style={{ fontSize: '28px' }}>{defaultEmoji}</span>
           );
         })()}
       </div>
-      <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', height: '100%' }}>
-        <h3 style={{ fontSize: 'clamp(8px, 2.5vw, 16px)', marginBottom: '10px', color: 'var(--text-primary)', margin: '0 0 10px 0', fontWeight: 700, whiteSpace: 'nowrap' }}>
+      <div style={{ padding: '18px', display: 'flex', flexDirection: 'column', height: '100%' }}>
+        <h3 style={{ fontSize: 'clamp(8px, 2.5vw, 15px)', margin: '0 0 8px 0', fontWeight: 700, whiteSpace: 'nowrap', color: 'var(--text-primary)' }}>
           {item.title}
         </h3>
         {'subtitle' in item && (item.subtitle as string) && (
-          <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: '12px', margin: '0 0 12px 0', fontWeight: 500 }}>
+          <p style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: 1.5, margin: '0 0 10px 0' }}>
             {(item.subtitle as string)}
           </p>
         )}
-        <p style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: 1.4, margin: '0 0 4px 0', fontWeight: 400 }}>
+        <p style={{ fontSize: '12px', color: 'var(--text-secondary)', margin: '0 0 4px 0' }}>
           {item.client}
         </p>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
-          <p style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: 1.4, margin: 0, fontWeight: 400, flex: 1 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <p style={{ fontSize: '12px', color: 'var(--text-secondary)', margin: 0, flex: 1 }}>
             {('duration' in item && (item.duration as string)) ? item.duration : item.date}
           </p>
           {'hasCreativeServer' in item && (item.hasCreativeServer as boolean) && (
             <span style={{
               fontSize: '11px',
-              background: 'var(--accent)',
-              color: 'white',
+              background: 'var(--accent-dim)',
+              color: '#0a0e14',
               padding: '2px 6px',
               borderRadius: '3px',
               whiteSpace: 'nowrap',

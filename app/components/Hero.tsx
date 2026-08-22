@@ -8,27 +8,28 @@ export default function Hero() {
   return (
     <section
       style={{
-        padding: '40px 0',
-        background: 'linear-gradient(135deg, var(--primary) 0%, var(--accent-dark) 100%)',
-        color: 'white',
-        textAlign: 'center',
+        padding: '140px 0 100px',
+        background: 'var(--bg)',
       }}
     >
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
         <h1
           style={{
-            fontSize: 'clamp(32px, 5vw, 48px)',
-            marginBottom: '20px',
-            fontWeight: 700,
+            fontSize: 'clamp(40px, 6vw, 72px)',
+            fontWeight: 800,
+            lineHeight: 1.1,
+            letterSpacing: '-0.02em',
+            marginBottom: '32px',
           }}
         >
-          마인크래프트 외주 개발
+          마인크래프트<br />외주 개발
         </h1>
         <p
           style={{
-            fontSize: 'clamp(16px, 2.5vw, 20px)',
-            marginBottom: '30px',
-            opacity: 0.95,
+            fontSize: '18px',
+            color: 'var(--text-secondary)',
+            maxWidth: '480px',
+            marginBottom: '40px',
           }}
         >
           런처와 서버, 맞춤형 솔루션
@@ -36,32 +37,18 @@ export default function Hero() {
         <button
           onClick={scrollToContact}
           style={{
-            display: 'inline-block',
-            backgroundColor: 'var(--accent-light)',
-            color: 'white',
-            padding: '14px 32px',
-            borderRadius: '8px',
-            fontWeight: 600,
-            fontSize: '16px',
+            background: 'var(--accent)',
+            color: '#08110d',
+            padding: '16px 36px',
             border: 'none',
+            borderRadius: '4px',
+            fontWeight: 700,
+            fontSize: '15px',
             cursor: 'pointer',
-            transition: 'all 0.3s ease',
-            boxShadow: '0 4px 12px rgba(6, 182, 212, 0.3)',
-          }}
-          onMouseEnter={e => {
-            const el = e.currentTarget;
-            el.style.backgroundColor = 'var(--accent)';
-            el.style.transform = 'translateY(-2px)';
-            el.style.boxShadow = '0 6px 16px rgba(6, 182, 212, 0.4)';
-          }}
-          onMouseLeave={e => {
-            const el = e.currentTarget;
-            el.style.backgroundColor = 'var(--accent-light)';
-            el.style.transform = 'translateY(0)';
-            el.style.boxShadow = '0 4px 12px rgba(6, 182, 212, 0.3)';
+            fontFamily: 'inherit',
           }}
         >
-          지금 요청하기
+          지금 요청하기 →
         </button>
       </div>
     </section>

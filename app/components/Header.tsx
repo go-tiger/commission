@@ -8,21 +8,20 @@ export default function Header() {
   return (
     <header
       style={{
-        background: 'linear-gradient(135deg, var(--primary) 0%, var(--accent-dark) 100%)',
-        color: 'white',
-        padding: '1rem 0',
+        background: 'var(--bg)',
+        borderBottom: '1px solid var(--border)',
+        padding: '1.2rem 0',
         position: 'sticky',
         top: 0,
         zIndex: 100,
-        boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
       }}
     >
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <div style={{ fontSize: '24px', fontWeight: 'bold', letterSpacing: '-1px' }}>
-            ⚙️ 고랑
+          <div style={{ fontSize: '22px', fontWeight: 800, letterSpacing: '-0.5px' }}>
+            고랑<span style={{ color: 'var(--accent)' }}>.</span>
           </div>
-          <nav className="hidden sm:flex">
+          <nav className="hidden sm:flex" style={{ gap: '2.5rem' }}>
             {[
               { label: '서비스', id: 'services' },
               { label: '포트폴리오', id: 'portfolio' },
@@ -32,18 +31,18 @@ export default function Header() {
                 key={id}
                 onClick={() => scrollTo(id)}
                 style={{
-                  color: 'white',
+                  color: 'var(--text-secondary)',
                   background: 'none',
                   border: 'none',
-                  marginLeft: '2rem',
+                  marginLeft: '2.5rem',
                   fontSize: '14px',
-                  opacity: 0.9,
                   cursor: 'pointer',
-                  transition: 'opacity 0.3s',
                   fontFamily: 'inherit',
+                  letterSpacing: '0.02em',
+                  transition: 'color 0.3s',
                 }}
-                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.opacity = '1')}
-                onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.opacity = '0.9')}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = 'var(--text-primary)')}
+                onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'var(--text-secondary)')}
               >
                 {label}
               </button>

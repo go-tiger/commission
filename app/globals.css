@@ -7,16 +7,14 @@
 }
 
 :root {
-  --primary: #1e3a5f;
-  --accent: #0ea5e9;
-  --accent-dark: #0369a1;
-  --accent-light: #38bdf8;
-  --success: #10b981;
-  --bg: #f8fafc;
-  --surface: #ffffff;
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
-  --border: #e2e8f0;
+  --bg: #0a0e14;
+  --surface: #12171f;
+  --surface2: #171d27;
+  --accent: #38f2c8;
+  --accent-dim: #1c8a72;
+  --text-primary: #f5f7fa;
+  --text-secondary: #8a97a8;
+  --border: #232b38;
 }
 
 body {
@@ -24,4 +22,13 @@ body {
   background-color: var(--bg);
   color: var(--text-primary);
   line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7ffbe0;
 }
