@@ -455,5 +455,16 @@
     "duration": "2026/07/03~12",
     "players": "",
     "hasCreativeServer": false
+  },
+  {
+    "id": 41,
+    "title": "어서와요! 카페 카르테의 섬",
+    "subtitle": "",
+    "game": "마인크래프트",
+    "client": "카페 카르테",
+    "date": "2026/08/25",
+    "duration": "2026/08/25~28",
+    "players": "",
+    "hasCreativeServer": true
   }
 ]
