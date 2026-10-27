@@ -9,11 +9,14 @@ export interface LauncherItem {
 export interface ServerItem {
   id: number;
   title: string;
+  subtitle?: string;
   game?: string;
   client: string;
   date: string;
   duration?: string;
   players?: string;
+  hasCreativeServer?: boolean;
+  youtubeId?: string;
   image?: string;
 }
 

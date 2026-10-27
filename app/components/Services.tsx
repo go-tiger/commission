@@ -1,55 +1,67 @@
-'use client';
-
-const services = [
-  {
-    emoji: '🚀',
-    title: '커스텀 런처',
-    description: '모드 로더, 프로필 관리, 자동 업데이트 기능을 포함한 마인크래프트 커스텀 런처',
-  },
-  {
-    emoji: '🖥️',
-    title: '게임 서버',
-    description: '게임 서버 구축, 성능 최적화 및 관리 제공',
-  },
-];
+import { base } from '../lib/portfolio';
 
 export default function Services() {
   return (
-    <section id='services' style={{ padding: '100px 0', background: 'var(--bg)' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
-        <p style={{ color: 'var(--accent)', fontSize: '13px', letterSpacing: '0.2em', fontWeight: 700, marginBottom: '16px' }}>
-          SERVICE
-        </p>
-        <h2 style={{ fontSize: 'clamp(32px, 4vw, 44px)', fontWeight: 800, marginBottom: '20px' }}>서비스</h2>
-        <div style={{ borderBottom: '1px solid var(--border)' }}>
-          {services.map((s, i) => (
-            <ServiceCard key={s.title} {...s} idx={i + 1} />
-          ))}
+    <>
+      <div className='grass' aria-hidden='true' />
+      <section id='services' className='sec'>
+        <div className='wrap'>
+          <div className='sec-head'>
+            <span className='eyebrow'>SERVICES</span>
+            <h2>무엇을 만들어 드릴까요?</h2>
+            <p>두 가지를 따로 맡기셔도 되고, 서버와 런처를 묶어서 한 번에 의뢰하셔도 됩니다.</p>
+          </div>
+          <div className='services'>
+            <article className='svc'>
+              <div className='svc-media'>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={`${base}/launcher/35.png`} alt='커스텀 런처 작업 예시' />
+              </div>
+              <div className='svc-body'>
+                <span className='eyebrow'>CUSTOM LAUNCHER</span>
+                <h3>커스텀 런처</h3>
+                <p>
+                  서버 전용 런처로 접속 과정을 줄입니다. 모드와 리소스팩 설치·업데이트를 런처가 처리하고, 서버 분위기에 맞춘 화면을 만듭니다.
+                </p>
+                <ul className='checks'>
+                  <li>모드·리소스팩 자동 설치</li>
+                  <li>업데이트 자동 반영</li>
+                  <li>Microsoft 계정 로그인</li>
+                  <li>서버 맞춤 디자인</li>
+                  <li>공지 표시</li>
+                  <li>원클릭 서버 접속</li>
+                </ul>
+                <a href='#portfolio'>런처 작업물 보기 →</a>
+              </div>
+            </article>
+            <article className='svc'>
+              <div className='svc-media'>
+                <div className='term' aria-hidden='true'>
+                  <div className='c'>$ server status</div>
+                  <div>[OK] 콘텐츠 플러그인 로드</div>
+                  <div>[OK] 제작 서버 동기화</div>
+                  <div>[OK] 참가자 화이트리스트 118명</div>
+                  <div className='w'>[OK] 방송 준비 완료 _</div>
+                </div>
+              </div>
+              <div className='svc-body'>
+                <span className='eyebrow'>GAME SERVER</span>
+                <h3>콘텐츠 서버 구축·운영</h3>
+                <p>합방, 대회, 야생 시즌 서버를 구축하고 방송 기간 동안 운영합니다. 필요하면 사전 제작용 서버도 함께 엽니다.</p>
+                <ul className='checks'>
+                  <li>서버 구축·세팅</li>
+                  <li>콘텐츠 플러그인 개발</li>
+                  <li>제작 서버 제공</li>
+                  <li>방송 기간 운영 지원</li>
+                  <li>대규모 인원 최적화</li>
+                  <li>마크 외 게임 서버</li>
+                </ul>
+                <a href='#portfolio'>서버 작업물 보기 →</a>
+              </div>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
-  );
-}
-
-function ServiceCard({ emoji, title, description, idx }: { emoji: string; title: string; description: string; idx: number }) {
-  return (
-    <div
-      style={{
-        borderTop: '1px solid var(--border)',
-        padding: '40px 0',
-        display: 'grid',
-        gridTemplateColumns: '80px 1fr',
-        gap: '24px',
-        alignItems: 'start',
-      }}
-    >
-      <span style={{ fontSize: '14px', color: 'var(--accent)', fontWeight: 700 }}>0{idx}</span>
-      <div>
-        <h3 style={{ fontSize: '26px', fontWeight: 700, marginBottom: '12px' }}>
-          {emoji} {title}
-        </h3>
-        <p style={{ fontSize: '15px', color: 'var(--text-secondary)', maxWidth: '560px' }}>{description}</p>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }

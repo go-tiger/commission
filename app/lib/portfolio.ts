@@ -1,8 +1,8 @@
 import type { PortfolioData, LauncherItem, ServerItem } from '../types/portfolio';
 
-export async function getPortfolioData(): Promise<PortfolioData> {
-  const base = process.env.NODE_ENV === 'production' ? '/commission' : '';
+export const base = process.env.NODE_ENV === 'production' ? '/commission' : '';
 
+export async function getPortfolioData(): Promise<PortfolioData> {
   const [launcherRes, serverRes, githubRes, commitsRes] = await Promise.all([
     fetch(`${base}/launcher/data.json`),
     fetch(`${base}/server/data.json`),
